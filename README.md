@@ -1,7 +1,5 @@
 # AIxImage - AI-Powered Image Generation Platform
 
-![AIxImage Banner](https://i.ibb.co/Jwc2LcMB/pixarai.png)
-
 Transform your photos with AI-powered enhancement and editing tools. Create stunning visuals with just a few clicks.
 
 ## Features ✨
