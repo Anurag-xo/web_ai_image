@@ -1,0 +1,43 @@
+name: Deploy AIxImage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run tests
+        run: |
+          bun test apps/backend
+          bun test apps/web
+
+      - name: Build Docker images
+        run: |
+          docker build -f docker/Dockerfile.backend -t ${{ secrets.ECR_REGISTRY }}/backend:${{ github.sha }} .
+          docker build -f docker/Dockerfile.frontend -t ${{ secrets.ECR_REGISTRY }}/frontend:${{ github.sha }} .
+
+      - name: Push to ECR
+        run: |
+          aws ecr get-login-password | docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
+          docker push ${{ secrets.ECR_REGISTRY }}/backend:${{ github.sha }}
+          docker push ${{ secrets.ECR_REGISTRY }}/frontend:${{ github.sha }}
+
+  deploy:
+    needs: build-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "${{ secrets.KUBE_CONFIG }}" > kubeconfig.yaml
+      - run: kubectl apply -f k8s/
