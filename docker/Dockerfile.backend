@@ -1,0 +1,18 @@
+FROM oven/bun:1
+
+WORKDIR /usr/src/app
+
+COPY package.json bun.lockb ./
+
+RUN bun install
+
+COPY . .
+
+
+RUN bunx turbo build --filter=backend...
+RUN bun run generate:db
+
+EXPOSE 8080
+
+# Start the frontend application
+CMD ["bun", "start:backend"]

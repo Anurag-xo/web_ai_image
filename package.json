@@ -1,0 +1,30 @@
+{
+  "name": "image-generation-platform",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "start:web": "cd ./apps/web && npm run start",
+    "start:backend": "cd ./apps/backend && npm run start",
+    "generate:db": "cd ./packages/db && npx prisma generate && cd ../.."
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0",
+    "turbo": "^2.4.1",
+    "typescript": "5.7.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.1.26",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "openai": "^4.93.0",
+    "openapi": "^1.0.1"
+  }
+}

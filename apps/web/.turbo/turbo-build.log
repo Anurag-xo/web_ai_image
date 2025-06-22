@@ -1,0 +1,93 @@
+
+[0m[2m[35m$[0m [2m[1mnext build[0m
+   [1m[38;2;173;127;168m▲ Next.js 15.1.7[39m[22m
+   - Environments: .env
+
+ [37m[1m [22m[39m Creating an optimized production build ...
+ [32m[1m✓[22m[39m Compiled successfully
+[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G[?25h
+./app/train/page.tsx
+23:10  Warning: 'TrainModelInput' is defined but never used.  @typescript-eslint/no-unused-vars
+30:12  Warning: Irregular whitespace not allowed.  no-irregular-whitespace
+53:15  Warning: 'response' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+134:43  Warning: 'e' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/Camera.tsx
+60:6  Warning: React Hook useEffect has a missing dependency: 'fetchImages'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/GenerateImage.tsx
+50:14  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/Models.tsx
+43:6  Warning: React Hook useEffect has missing dependencies: 'getToken' and 'setSelectedModel'. Either include them or remove the dependency array. If 'setSelectedModel' changes too often, find the parent component that defines it and wrap that definition in useCallback.  react-hooks/exhaustive-deps
+
+./components/PacksClient.tsx
+7:19  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
+7:27  Warning: 'Sparkles' is defined but never used.  @typescript-eslint/no-unused-vars
+7:37  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
+8:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
+10:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+17:9  Warning: 'filteredPacks' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+70:30  Warning: 'index' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./components/Train.tsx
+51:10  Warning: 'zipKey' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+163:19  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/home/Testimonials.tsx
+30:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/payment/PaymentSuccessContent.tsx
+16:18  Warning: 'AnimatePresence' is defined but never used.  @typescript-eslint/no-unused-vars
+125:15  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/payment/PurchasesPage.tsx
+24:11  Warning: 'error' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+184:67  Warning: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./components/payment/VerifyContent.tsx
+13:3  Warning: 'ArrowRight' is defined but never used.  @typescript-eslint/no-unused-vars
+89:23  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./components/ui/label.tsx
+4:13  Warning: 'LabelPrimitive' is defined but never used.  @typescript-eslint/no-unused-vars
+5:20  Warning: 'VariantProps' is defined but never used.  @typescript-eslint/no-unused-vars
+9:7  Warning: 'labelVariants' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+16:6  Warning: 'className' is missing in props validation  react/prop-types
+
+./components/ui/upload.tsx
+3:8  Warning: 'JSZip' is defined but never used.  @typescript-eslint/no-unused-vars
+4:8  Warning: 'axios' is defined but never used.  @typescript-eslint/no-unused-vars
+15:10  Warning: 'BACKEND_URL' is defined but never used.  @typescript-eslint/no-unused-vars
+15:23  Warning: 'CLOUDFLARE_URL' is defined but never used.  @typescript-eslint/no-unused-vars
+41:6  Warning: React Hook useCallback has a missing dependency: 'handleUpload'. Either include it or remove the dependency array. If 'handleUpload' changes too often, find the parent component that defines it and wrap that definition in useCallback.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+[?25l [36m.[39m [2K[1G [36m..[39m [2K[1G [36m...[39m [2K[1G [36m.[39m [2K[1G [36m..[39m [2K[1G [36m...[39m [2K[1G[?25h    [32m[1m✓[22m[39m Linting and checking validity of types 
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/11)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/11)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/11)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/11)  [36m[=== ][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (11/11)
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
+
+[4mRoute (app)[24m                              [4mSize[24m     [4mFirst Load JS[24m
+┌ ○ /                                    10.4 kB         [37m[1m218 kB[22m[39m
+├ ○ /_not-found                          988 B           [37m[1m107 kB[22m[39m
+├ ƒ /dashboard                           49.2 kB         [37m[1m287 kB[22m[39m
+├ ○ /payment/cancel                      2.19 kB         [37m[1m154 kB[22m[39m
+├ ○ /payment/success                     3.65 kB         [37m[1m175 kB[22m[39m
+├ ○ /payment/verify                      4.78 kB         [37m[1m176 kB[22m[39m
+├ ○ /pricing                             4.89 kB         [37m[1m177 kB[22m[39m
+├ ƒ /purchases                           9.68 kB         [37m[1m189 kB[22m[39m
+└ ○ /train                               5.83 kB         [37m[1m185 kB[22m[39m
++ First Load JS shared by all            [37m[1m106 kB[22m[39m
+  ├ chunks/855-84b08f11fe4e4629.js       50.7 kB
+  ├ chunks/87c73c54-0e6a3c1ea152917f.js  53 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+ƒ Middleware                             [37m[1m68.4 kB[22m[39m
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[?25h
