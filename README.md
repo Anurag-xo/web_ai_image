@@ -187,7 +187,3 @@ We welcome contributions! Please follow these steps:
 ## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support 💬
-
-For support, please open an issue on GitHub or contact us at support@aiximage.com.
