@@ -1,17 +1,8 @@
-<div align="center">
-  <br />
-  <h1>
-    AIxImage - AI-Powered Image Generation Platform
-  </h1>
-  <p>
-   Transform your photos with AI-powered enhancement and editing tools. Create stunning visuals with just a few clicks.
-  </p>
-</div>
+# AIxImage - AI-Powered Image Generation Platform
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/Anurag-roy/AnPhoto_AI/actions/workflows/ci.yml/badge.svg)](https://github.com/Anurag-roy/AnPhoto_AI/actions/workflows/ci.yml)
+Transform your photos with AI-powered enhancement and editing tools. Create stunning visuals with just a few clicks.
 
-## ✨ Features
+## Features ✨
 
 - 🎨 AI Image Generation with custom models
 - 📸 Real-time image preview and gallery
@@ -22,36 +13,28 @@
 - 🚀 Modern Next.js frontend with TypeScript
 - ⚡ Fast Node.js backend with Express
 
----
-
-## 🛠️ Tech Stack
+## Tech Stack 🛠️
 
 ### Frontend
 
-| Technology         | Description             |
-| ------------------ | ----------------------- |
-| **Framework**      | Next.js 14 (App Router) |
-| **Styling**        | Tailwind CSS            |
-| **UI Components**  | Shadcn/UI               |
-| **State Mgmt.**    | React hooks             |
-| **Animation**      | Framer Motion           |
-| **Authentication** | Clerk                   |
-| **Payments**       | Stripe & Razorpay       |
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/UI
+- **State Management**: React hooks
+- **Animation**: Framer Motion
+- **Authentication**: Clerk
+- **Payments**: Stripe & Razorpay
 
 ### Backend
 
-| Technology         | Description                   |
-| ------------------ | ----------------------------- |
-| **Runtime**        | Node.js with Bun              |
-| **Framework**      | Express.js                    |
-| **Database**       | PostgreSQL with Prisma ORM    |
-| **AI Integration** | Fal.ai                        |
-| **Storage**        | S3-compatible (Cloudflare R2) |
-| **API**            | RESTful                       |
+- **Runtime**: Node.js with Bun
+- **Framework**: Express.js
+- **Database**: PostgreSQL with Prisma ORM
+- **AI Integration**: Fal.ai
+- **Storage**: S3-compatible (Cloudflare R2)
+- **API**: RESTful
 
----
-
-## 🚀 Getting Started
+## Getting Started 🚀
 
 ### Prerequisites
 
@@ -64,29 +47,35 @@
 
 ### Installation
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/aiximage.git
-    cd aiximage
-    ```
-2.  Install dependencies:
-    ```bash
-    bun install
-    ```
-3.  Set up environment variables:
-    - Create `.env` files in both `apps/backend` and `apps/web`
-    - Refer to the [environment variables guide](#-environment-variables) below
-4.  Run the development server:
-    ```bash
-    bun dev
-    ```
-5.  Open `http://localhost:3000` in your browser.
+1. Clone the repository:
 
----
+   ```bash
+   git clone https://github.com/yourusername/aiximage.git
+   cd aiximage
+   ```
 
-## 🔑 Environment Variables
+2. Install dependencies:
 
-### Backend (`.env` in `apps/backend`)
+   ```bash
+   bun install
+   ```
+
+3. Set up environment variables:
+
+   - Create `.env` files in both `apps/backend` and `apps/web`
+   - Refer to the [environment variables guide](#environment-variables) below
+
+4. Run the development server:
+
+   ```bash
+   bun dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Environment Variables
+
+#### Backend (`.env` in `apps/backend`)
 
 ```env
 # Database
@@ -117,7 +106,7 @@ WEBHOOK_BASE_URL="your_webhook_base_url"
 FRONTEND_URL="your_frontend_url"
 ```
 
-### Frontend (`.env.local` in `apps/web`)
+#### Frontend (`.env.local` in `apps/web`)
 
 ```env
 NEXT_PUBLIC_BACKEND_URL="http://localhost:8080"
@@ -125,9 +114,7 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
 CLERK_SECRET_KEY="your_clerk_secret_key"
 ```
 
----
-
-## 📂 Project Structure
+## Project Structure 📂
 
 ```
 aiximage/
@@ -144,9 +131,7 @@ aiximage/
 └── turbo.json            # Turborepo configuration
 ```
 
----
-
-## 🚢 Deployment
+## Deployment 🚢
 
 ### Docker
 
@@ -158,14 +143,12 @@ docker-compose up --build
 
 ### Vercel
 
-1.  Push your code to a GitHub repository.
-2.  Import the project in Vercel.
-3.  Set up environment variables.
-4.  Deploy!
+1. Push your code to a GitHub repository
+2. Import the project in Vercel
+3. Set up environment variables
+4. Deploy!
 
----
-
-## 📚 API Documentation
+## API Documentation 📚
 
 ### Authentication
 
@@ -191,27 +174,16 @@ docker-compose up --build
 - `GET /payment/credits/:userId` - Get user credits
 - `POST /payment/webhook` - Payment webhook handler
 
----
-
-## 🤝 Contributing
+## Contributing 🤝
 
 We welcome contributions! Please follow these steps:
 
-1.  Fork the repository.
-2.  Create your feature branch (`git checkout -b feature/amazing-feature`).
-3.  Commit your changes (`git commit -m 'Add some amazing feature'`).
-4.  Push to the branch (`git push origin feature/amazing-feature`).
-5.  Open a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
----
-
-## 📄 License
+## License 📄
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 💬 Support
-
-For support, please open an issue on GitHub or contact us at support@aiximage.com.
-
