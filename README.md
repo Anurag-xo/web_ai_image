@@ -1,189 +1,122 @@
-# AIxImage - AI-Powered Image Generation Platform
+# An-Photo AI - Image Generation Platform
 
-Transform your photos with AI-powered enhancement and editing tools. Create stunning visuals with just a few clicks.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/)
+[![Stripe](https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white)](https://stripe.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
-## Features ✨
+An-Photo AI is a full-stack application for generating AI-powered images. It features a user-friendly interface for generating, viewing, and managing images, with a robust backend to handle the image generation and user data.
 
-- 🎨 AI Image Generation with custom models
-- 📸 Real-time image preview and gallery
-- 🏗️ Custom model training
-- 💳 Credit-based payment system
-- 🔐 Secure authentication with Clerk
-- 💰 Payment integration with Stripe & Razorpay
-- 🚀 Modern Next.js frontend with TypeScript
-- ⚡ Fast Node.js backend with Express
+## ✨ Features
 
-## Tech Stack 🛠️
+- **AI Image Generation**: Create unique images from text prompts using advanced AI models.
+- **User Authentication**: Secure user accounts and personalized experiences with Clerk.
+- **Subscription Plans**: Monetize your service with Stripe-based subscription plans.
+- **Credit System**: Users can purchase credits to generate images.
+- **Image Gallery**: View and manage your generated images.
+- **Modern Tech Stack**: Built with the latest technologies for a fast, scalable, and maintainable application.
 
-### Frontend
+## 🚀 Getting Started
 
-- **Framework**: Next.js 14 (App Router)
-- **Styling**: Tailwind CSS
-- **UI Components**: Shadcn/UI
-- **State Management**: React hooks
-- **Animation**: Framer Motion
-- **Authentication**: Clerk
-- **Payments**: Stripe & Razorpay
-
-### Backend
-
-- **Runtime**: Node.js with Bun
-- **Framework**: Express.js
-- **Database**: PostgreSQL with Prisma ORM
-- **AI Integration**: Fal.ai
-- **Storage**: S3-compatible (Cloudflare R2)
-- **API**: RESTful
-
-## Getting Started 🚀
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-- Node.js 18+ or Bun
-- PostgreSQL database
-- Clerk account for authentication
-- Stripe/Razorpay account for payments
-- Cloudflare R2 or S3-compatible storage
-- Fal.ai API key
+- [Node.js](https://nodejs.org/en/) (v18 or higher)
+- [Bun](https://bun.sh/) (v1.1.26 or higher)
+- [Docker](https://www.docker.com/get-started)
 
 ### Installation
 
-1. Clone the repository:
+1.  **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/yourusername/aiximage.git
-   cd aiximage
-   ```
+    ```bash
+    git clone https://github.com/your-username/anphoto_ai.git
+    cd anphoto_ai
+    ```
 
-2. Install dependencies:
+2.  **Install dependencies:**
 
-   ```bash
-   bun install
-   ```
+    ```bash
+    bun install
+    ```
 
-3. Set up environment variables:
+3.  **Set up environment variables:**
 
-   - Create `.env` files in both `apps/backend` and `apps/web`
-   - Refer to the [environment variables guide](#environment-variables) below
+    Create a `.env` file in the root of the `apps/web` and `apps/backend` directories and add the necessary environment variables. You can use the `.env.example` files as a template.
 
-4. Run the development server:
+4.  **Generate Prisma Client:**
 
-   ```bash
-   bun dev
-   ```
+    ```bash
+    bun run generate:db
+    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+5.  **Run the development servers:**
 
-### Environment Variables
+    ```bash
+    bun run dev
+    ```
 
-#### Backend (`.env` in `apps/backend`)
+    This will start the frontend and backend servers concurrently.
 
-```env
-# Database
-DATABASE_URL="postgresql://user:password@localhost:5432/aiximage"
+    - Frontend: `http://localhost:3000`
+    - Backend: `http://localhost:4000`
 
-# AI Service
-FAL_KEY="your_fal_ai_key"
+## 📁 Project Structure
 
-# Storage
-S3_ACCESS_KEY="your_s3_access_key"
-S3_SECRET_KEY="your_s3_secret_key"
-BUCKET_NAME="your_bucket_name"
-ENDPOINT="your_s3_endpoint"
+This project is a monorepo managed by Turborepo.
 
-# Authentication
-CLERK_JWT_PUBLIC_KEY="your_clerk_public_key"
-CLERK_SECRET_KEY="your_clerk_secret_key"
-CLERK_ISSUER="https://your-clerk-instance.clerk.accounts.dev"
-SIGNING_SECRET="your_clerk_webhook_signing_secret"
+- `apps/web`: The Next.js frontend application.
+- `apps/backend`: The Express.js backend application.
+- `packages/db`: The Prisma schema and database client.
+- `packages/common`: Shared types and utility functions.
+- `packages/ui`: Shared React components.
+- `packages/eslint-config`: Shared ESLint configurations.
+- `packages/typescript-config`: Shared TypeScript configurations.
 
-# Payments
-STRIPE_SECRET_KEY="your_stripe_secret_key"
-RAZORPAY_KEY_ID="your_razorpay_key_id"
-RAZORPAY_KEY_SECRET="your_razorpay_secret_key"
+## 📜 Scripts
 
-# URLs
-WEBHOOK_BASE_URL="your_webhook_base_url"
-FRONTEND_URL="your_frontend_url"
-```
+- `bun run dev`: Start the development servers for all apps.
+- `bun run build`: Build all apps for production.
+- `bun run lint`: Lint all apps.
+- `bun run format`: Format the codebase with Prettier.
+- `bun run start:web`: Start the frontend app in production mode.
+- `bun run start:backend`: Start the backend app in production mode.
+- `bun run generate:db`: Generate the Prisma client.
 
-#### Frontend (`.env.local` in `apps/web`)
+## 🛠️ Tech Stack
 
-```env
-NEXT_PUBLIC_BACKEND_URL="http://localhost:8080"
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
-CLERK_SECRET_KEY="your_clerk_secret_key"
-```
+### Frontend
 
-## Project Structure 📂
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Clerk](https://clerk.com/)
+- [Stripe](https://stripe.com/)
 
-```
-aiximage/
-├── apps/
-│   ├── backend/          # Node.js backend service
-│   └── web/              # Next.js frontend application
-├── packages/
-│   ├── common/           # Shared types and utilities
-│   ├── db/               # Database schema and Prisma client
-│   ├── eslint-config/    # ESLint configurations
-│   ├── typescript-config # TypeScript configurations
-│   └── ui/               # Shared UI components
-├── docker/               # Docker configurations
-└── turbo.json            # Turborepo configuration
-```
+### Backend
 
-## Deployment 🚢
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Fal.ai](https://fal.ai/)
 
-### Docker
+### Tools
 
-Build and run with Docker Compose:
+- [Turborepo](https://turborepo.org/)
+- [Docker](https://www.docker.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-```bash
-docker-compose up --build
-```
-
-### Vercel
-
-1. Push your code to a GitHub repository
-2. Import the project in Vercel
-3. Set up environment variables
-4. Deploy!
-
-## API Documentation 📚
-
-### Authentication
-
-- `POST /api/webhook/clerk` - Clerk webhook handler
-
-### Image Generation
-
-- `POST /ai/training` - Train new AI model
-- `POST /ai/generate` - Generate images
-- `POST /pack/generate` - Generate images from pack
-- `GET /image/bulk` - Get generated images
-
-### Models
-
-- `GET /models` - Get available models
-- `GET /pre-signed-url` - Get S3 upload URL
-
-### Payments
-
-- `POST /payment/create` - Create payment session
-- `POST /payment/razorpay/verify` - Verify Razorpay payment
-- `GET /payment/subscription/:userId` - Get user subscription
-- `GET /payment/credits/:userId` - Get user credits
-- `POST /payment/webhook` - Payment webhook handler
-
-## Contributing 🤝
-
-We welcome contributions! Please follow these steps:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License 📄
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
